@@ -1,17 +1,169 @@
-body {
+* {
 margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body {
 font-family: Arial, sans-serif;
-background: #111;
-color: white;
-text-align: center;
+background: #0b0b0b;
+color: #fff;
+line-height: 1.6;
 }
 
-h1 {
-margin-top: 120px;
-font-size: 48px;
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.7);
+backdrop-filter:blur(10px);
 }
 
-p {
-font-size: 22px;
-color: #bfbfbf;
+nav h2{
+color:#00ff99;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00ff99;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding:0 8%;
+background:
+radial-gradient(circle at top right,#0f5132,#0b0b0b 45%);
+}
+
+.badge{
+display:inline-block;
+width:max-content;
+padding:8px 16px;
+border:1px solid #00ff99;
+border-radius:30px;
+color:#00ff99;
+}
+
+.hero h1{
+font-size:70px;
+margin:25px 0;
+}
+
+.hero strong{
+color:#00ff99;
+}
+
+.hero p{
+color:#bbb;
+max-width:650px;
+font-size:20px;
+}
+
+.buttons{
+margin-top:40px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+border-radius:12px;
+text-decoration:none;
+margin-right:15px;
+transition:.3s;
+}
+
+.primary{
+background:#00ff99;
+color:black;
+}
+
+.primary:hover{
+transform:translateY(-5px);
+}
+
+.secondary{
+border:1px solid #555;
+color:white;
+}
+
+.secondary:hover{
+background:#222;
+}
+
+section{
+padding:100px 8%;
+}
+
+section h2{
+font-size:40px;
+margin-bottom:30px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
+.card,
+.project{
+background:#151515;
+padding:30px;
+border-radius:18px;
+border:1px solid #222;
+transition:.3s;
+}
+
+.card:hover,
+.project:hover{
+transform:translateY(-10px);
+border-color:#00ff99;
+}
+
+.email{
+color:#00ff99;
+text-decoration:none;
+font-size:22px;
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:#777;
+border-top:1px solid #222;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:46px;
+}
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+nav div{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
 }
